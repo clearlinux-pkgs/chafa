@@ -7,7 +7,7 @@
 #
 Name     : chafa
 Version  : 1.14.1
-Release  : 1
+Release  : 2
 URL      : https://github.com/hpjansson/chafa/releases/download/1.14.1/chafa-1.14.1.tar.xz
 Source0  : https://github.com/hpjansson/chafa/releases/download/1.14.1/chafa-1.14.1.tar.xz
 Summary  : Image to character art facsimile
@@ -26,6 +26,10 @@ BuildRequires : libxml2-dev
 BuildRequires : libxslt-bin
 BuildRequires : pkgconfig(freetype2)
 BuildRequires : pkgconfig(glib-2.0)
+BuildRequires : pkgconfig(libavif)
+BuildRequires : pkgconfig(libtiff-4)
+BuildRequires : pkgconfig(libwebp)
+BuildRequires : pkgconfig(libwebpdemux)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -94,7 +98,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1719613549
+export SOURCE_DATE_EPOCH=1719613740
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -135,7 +139,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1719613549
+export SOURCE_DATE_EPOCH=1719613740
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/chafa
 cp %{_builddir}/chafa-%{version}/COPYING %{buildroot}/usr/share/package-licenses/chafa/31a3d460bb3c7d98845187c716a30db81c44b615 || :
