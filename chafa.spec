@@ -9,7 +9,7 @@
 #
 Name     : chafa
 Version  : 1.14.2
-Release  : 8
+Release  : 9
 URL      : https://github.com/hpjansson/chafa/releases/download/1.14.2/chafa-1.14.2.tar.xz
 Source0  : https://github.com/hpjansson/chafa/releases/download/1.14.2/chafa-1.14.2.tar.xz
 Source1  : https://github.com/hpjansson/chafa/releases/download/1.14.2/chafa-1.14.2.tar.xz.asc
